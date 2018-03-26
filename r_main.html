@@ -1,0 +1,154 @@
+<?php
+	include ('db.php');
+	$stmt = $conn->prepare("SELECT sport FROM user WHERE id = ?");
+	$stmt->bind_param('i', $_GET['id']);
+	$stmt->execute();
+	$row = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
+	if($row['sport'] != 3){
+		echo "<script>alert('Nem ezt a sportot valasztottad!'); window.location = '/web/index.html';</script>";		
+	}
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Go Pro In 30</title>
+		<meta charset="utf-8">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<link rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-inverse navbar-sor" style='z-index:1'>
+		  <div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Go Pro In 30</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">Röplabda</a></li>
+		        <li><a href="#">Kosárlabda</a></li>
+		        <li class="disabled"><a href="#">Kézilabda</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Új felhasználó létrehozása</a></li>
+		            <li><a href="#">Új sport választása</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Kilépés</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+		<div class="container container_hatter">
+
+			<center><h1>Röplabda</h1></center>
+			<br><h3>Üdvözöllek!</h3>
+
+			A röplabda világa tárt karokkal vár bárkit aki szórakozni szeretne barátaival miközben az iskola hírnevéhez is hozzájárulnának. A röplabda egy hobbi szinten nem igényel túlságosan jó fizikai kondíciót, ugyanis a játék alapmozdulatainak nagyrészét akár a földről is el lehet végeyni, annak ellenére, hogy ugrásból a leg hatásosabbak, ezért szinte bárki részévé válhat az iskolacsapatnak.<br><br>
+
+			Az elkövetkező 30 nap folyamán a röplabda világába ellátogatva minden tudnivalóra szert fogunk tenni amely egy mérkőzés győzelmének eléréséhez szükségesek. Mivel a következő programnak önként vetjük alá magunkat, a saját felelőségünk, hogy a leírt gyakorlatokat lelkiismeretesen végezzük el, mivelhogy csak szorgos munka által érhetünk el eredményeket amelyek a röplabda pályán fognak a legjobban meglátszani.<br><br>
+
+			<div class="row">
+				<div class="col-sm-3 a"><a href="r_1.html"><button type="button" class="btn btn-success elem_margin">1. Nap</button></a></div>
+				<div class="col-sm-3 b"><a href="r_2.html"><button type="button" class="btn btn-warning elem_margin">2. Nap</button></a></div>
+				<div class="col-sm-3 c"><a href="r_3.html"><button type="button" class="btn btn-default elem_margin">3. Nap</button></a></div>
+				<div class="col-sm-3 a"><a href="r_4.html"><button type="button" class="btn btn-default elem_margin">4. Nap</button></a></div>
+				<div class="col-sm-3 b"><a href="r_5.html"><button type="button" class="btn btn-default elem_margin">5. Nap</button></a></div>
+				<div class="col-sm-3 a"><a href="r_6.html"><button type="button" class="btn btn-default elem_margin">6. Nap</button></a></div>
+				<div class="col-sm-3 b"><a href="r_7.html"><button type="button" class="btn btn-default elem_margin">7. Nap</button></a></div>
+				<div class="col-sm-3 c"><a href="r_8.html"><button type="button" class="btn btn-default elem_margin">8. Nap</button></a></div>
+				<div class="col-sm-3 a"><a href="r_9.html"><button type="button" class="btn btn-default elem_margin">9. Nap</button></a></div>
+				<div class="col-sm-3 b"><a href="r_10.html"><button type="button" class="btn btn-default elem_margin">10. Nap</button></a></div>
+				<div class="col-sm-3 a"><a href="r_11.html"><button type="button" class="btn btn-default elem_margin">11. Nap</button></a></div>
+				<div class="col-sm-3 b"><a href="r_12.html"><button type="button" class="btn btn-default elem_margin">12. Nap</button></a></div>
+				<div class="col-sm-3 c"><a href="r_13.html"><button type="button" class="btn btn-default elem_margin">13. Nap</button></a></div>
+				<div class="col-sm-3 a"><a href="r_14.html"><button type="button" class="btn btn-default elem_margin">14. Nap</button></a></div>
+				<div class="col-sm-3 b"><a href="r_15.html"><button type="button" class="btn btn-default elem_margin">15. Nap</button></a></div>
+				<div class="col-sm-3 a"><a href="r_16.html"><button type="button" class="btn btn-default elem_margin">16. Nap</button></a></div>
+				<div class="col-sm-3 b"><a href="r_17.html"><button type="button" class="btn btn-default elem_margin">17. Nap</button></a></div>
+				<div class="col-sm-3 c"><a href="r_18.html"><button type="button" class="btn btn-default elem_margin">18. Nap</button></a></div>
+				<div class="col-sm-3 a"><a href="r_19.html"><button type="button" class="btn btn-default elem_margin">19. Nap</button></a></div>
+				<div class="col-sm-3 b"><a href="r_20.html"><button type="button" class="btn btn-default elem_margin">20. Nap</button></a></div>
+				<div class="col-sm-3 a"><a href="r_21.html"><button type="button" class="btn btn-default elem_margin">21. Nap</button></a></div>
+				<div class="col-sm-3 b"><a href="r_22.html"><button type="button" class="btn btn-default elem_margin">22. Nap</button></a></div>
+				<div class="col-sm-3 c"><a href="r_23.html"><button type="button" class="btn btn-default elem_margin">23. Nap</button></a></div>
+				<div class="col-sm-3 a"><a href="r_24.html"><button type="button" class="btn btn-default elem_margin">24. Nap</button></a></div>
+				<div class="col-sm-3 b"><a href="r_25.html"><button type="button" class="btn btn-default elem_margin">25. Nap</button></a></div>
+				<div class="col-sm-3 a"><a href="r_26.html"><button type="button" class="btn btn-default elem_margin">26. Nap</button></a></div>
+				<div class="col-sm-3 b"><a href="r_27.html"><button type="button" class="btn btn-default elem_margin">27. Nap</button></a></div>
+				<div class="col-sm-3 c"><a href="r_28.html"><button type="button" class="btn btn-default elem_margin">28. Nap</button></a></div>
+				<div class="col-sm-3"></div>
+				<div class="col-sm-3 b"><a href="r_29.html"><button type="button" class="btn btn-default elem_margin">29. Nap</button></a></div>
+				<div class="col-sm-3 a"><a href="r_30.html"><button type="button" class="btn btn-default elem_margin">30. Nap</button></a></div>
+			</div>
+			<br>
+			A fenti programok naponta fognak megnyílni számunkra, de amennyiben azt tapasztaljuk, hogy a napi erőfeszítés a munkánk minőségének romlását eredményezi, ajánlatos 1-2 nap szünetet tartanunk 3-4 edzésnap után.<br><br>
+
+			Amint egy gyakorlatot elsajátítottunk nem szabad azt a háttérbe szorítanunk az edzéseink során, ugyanis a tanultak közül bármelyik taktika/technika nagy segítségünkre lehet a meccseink során. Ezen okból kifolyólag a legjobb megoldás, hogy célunknak tűzzük ki, hogy edzéseink során minden mozdulatot legalább 3 alkalommal alkalmazzunk hatásosan. Ez nem csak a technikákra való emlékezést segíti elő, hanem a technikák tökéletesítését is.<br><br>
+
+			Amennyiben a programnak úgy szeretnénk alávetni megunkat, hogy nem mindig lessz gyakorló partnerünk, nem kell pánikba esnünk, ugyanis a gyakorlatok ugyanolyan hatékonysággal elvégezhetőek egy fal, vagy egy röplabda háló segítségével. Az eggyetlen nélkülözhetetlen eszköz a gyakorlásra egy (igazi) röplabda, amellyel a gyakorlatainkat végezzük.<br><br>
+
+			<h3>Sok sikert kívánok az elkövetkező hetek folyamára, és ha netán a program abbahagyását fontolgatnánk, jusson eszünkbe a cél, amelyet magunknak kitűztünk!</h3><br><br><br><br>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script> 
+			var id = <?php echo $_GET['id']?>;
+			var daysPassed = 0;
+			$.ajax({
+				url : 'getDaysPassed.php',
+				type : 'GET',
+				data:{
+					id : id
+				},
+				success: function(s){
+					daysPassed = parseInt(s);
+					$(".h_but").each(function(a){
+						$(this).prop('disabled', true)
+						$(this).addClass('btn-warning');
+					})
+					for(var i = 1; i <= daysPassed; i++){
+						console.log("#h_but" + String(i));
+						$("#h_but" + String(i)).removeAttr('disabled');
+						$("#h_but" + String(i)).removeClass('btn-warning');
+						$("#h_but" + String(i)).addClass('btn-success');
+					}
+				},
+				error : function(e){
+					alert("Szerver hiba.");
+					console.log("Error: " + String(e));
+				}
+			});
+			$(".h_but").click(function(){
+				if($(this).hasClass('btn-success')){
+					window.location = "/web/" + $(this).data('href');
+				}else{
+					alert("Meg nem jutottal el eddig a napig!");
+				}
+			})
+		</script>
+	</body>
+</html>

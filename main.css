@@ -1,0 +1,180 @@
+
+.kep {
+	width:100%;
+}
+ font: ;
+.a {
+	background: #999;
+}
+
+.b {
+	background: #666;
+}
+
+.c {
+	background: #333;
+}
+
+.elem_margin {
+	display: block;
+	margin: auto;
+}
+
+.cim {
+	text-align: center;
+	font-weight: bold;
+}
+
+.center {
+	position: absolute;
+	text-align: center;
+}
+
+.paragraph {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.panel .showOnHover {
+	display: none;
+}
+
+.ajanlott:hover {
+	box-shadow: 0px 0px 30px #D7DE5D;
+}
+
+.nem_ajanlott:hover {
+	box-shadow: 0px 0px 30px #D44242;
+}
+
+.engedelyezett:hover {
+	box-shadow: 0px 0px 30px #52D174;
+}
+
+.panel:hover .showOnHover{
+	display: inline-block;
+}
+
+.panel-body{
+	text-align: justify;
+}
+
+.panel-text{
+	margin-top: 10px;
+	margin-bottom:10px;
+
+}
+
+html, body{
+	height: 100%;
+}
+
+body{
+	margin:0px;
+	padding:0px;
+	font-family:"Helvetica Neue", Helvetica, Arial;
+}
+
+h1{
+	font-family:"Helvetica Neue", Helvetica, Arial;
+}
+
+h3{
+	font-weight: bold;
+}
+
+.scroll{
+	overflow:auto; 
+	height:760px;
+}
+
+#sidebar{
+	background:#151718;
+	width:200px;
+	height:100%;
+	display:block;
+	position:absolute;
+	left:-200px;
+	top:0px;
+	transition:left 0.3s linear;
+}
+
+#sidebar.visible{
+	left:0px;
+	transition:left 0.3s linear;
+}
+
+.sbul{
+	margin:0px;
+	padding:0px;
+}
+
+ul li{
+	list-style:none;
+}
+
+.sbul li a{
+	background:#1C1E1F;
+	color:#ccc;
+	border-bottom:1px solid #111;
+	display:block;
+	width:180px;
+	padding:10px;
+	text-decoration: none;
+}
+
+#sidebar-btn{
+	display:inline-block;
+	vertical-align: middle;
+	width:20px;
+	height:15px;
+	cursor:pointer;
+	margin:20px;
+	position:absolute;
+	top:0px;
+	right:-60px;
+	z-index: 1;
+}
+
+#sidebar-btn span{
+	height:1px;
+	background: #A7AEB0;
+	margin-bottom:5px;
+	display:block;
+}
+
+#sidebar-btn span:nth-child(2){
+	width:75%;
+}
+
+#sidebar-btn span:nth-child(3){
+	width:50%;
+}
+
+#tartalom{
+	text-align: center;
+	text-align: justify;
+	margin: auto;
+	margin-left: 75px;
+	margin-right: 75px;
+	margin-top: 50px;
+	transition: margin-left 0.5s ease;
+}
+
+#tartalom.visible{
+	margin-left: 275px;
+}
+
+.container-hatter{
+	background: #E3E3E3;
+	height: 100%;
+}
+
+.navbar-sor{
+	margin-bottom: 0 !important;
+}
+
+.container-backg{
+	margin-top: 0;
+	margin-bottom: 0;
+}
